@@ -17,6 +17,5 @@ func main()  {
 	userCode :=400
 	fmt.Println("the total usrcode is ",userCode);
 
-
-
+	
 }
