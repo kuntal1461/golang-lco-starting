@@ -23,4 +23,5 @@ func main()  {
 	fmt.Println("This is the date with day: ",presentTime.Format("01-02-2006 Monday"))
 
 	
+	
 }
