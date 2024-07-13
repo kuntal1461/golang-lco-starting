@@ -1,0 +1,26 @@
+n Go (Golang), new and make are used for different purposes when dealing with memory allocation.
+
+new:
+
+Purpose: Allocates memory.
+Usage: Used to allocate memory for a variable of a specific type. It returns a pointer to the zero value of that type.
+Example:
+go
+Copy code
+var p *int
+p = new(int) // p now points to an int with value 0
+Characteristics: new(T) allocates zeroed storage for a new item of type T and returns its address, a value of type *T. It's equivalent to &T{}.
+make:
+
+Purpose: Initializes and allocates memory.
+Usage: Used to create slices, maps, and channels. It returns an initialized (not zeroed) value of the type.
+Example:
+go
+Copy code
+s := make([]int, 10)       // Creates a slice of int with length 10
+m := make(map[string]int)  // Creates a map from string to int
+ch := make(chan int)       // Creates a channel of int
+Characteristics: make(T, args) returns an initialized (not zeroed) value of type T (not *T). It is used only for slices, maps, and channels, which are types that must be initialized before use.
+Summary:
+Use new when you need to allocate memory and get a pointer to the zero value of a type.
+Use make when you need to initialize and allocate slices, maps, or channels.
